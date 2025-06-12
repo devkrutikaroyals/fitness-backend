@@ -45,6 +45,12 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, message: 'Server Error' });
 });
 
+
+app.get('/', (req, res) => {
+  res.send('Fitness Management System API is running.');
+}); 
+
+
 // Create HTTP server and start it
 const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
